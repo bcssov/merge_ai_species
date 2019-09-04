@@ -1,0 +1,29 @@
+merge_ai_species = {
+    resources = {
+        category = edicts
+        cost = {
+            influence = 0
+        }
+    }
+
+    length = 0
+
+    potential = {
+        NOT = {
+            has_global_flag = dynamic_mod_menu_installed
+        }
+    }
+
+    effect = {
+        custom_tooltip = edict_merge_ai_species_effect
+        hidden_effect = {
+            country_event = {
+                id = merge_ai_species.1
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

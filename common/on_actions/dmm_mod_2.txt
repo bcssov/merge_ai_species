@@ -1,0 +1,12 @@
+
+on_game_start = {
+	events = {
+		dmm_mod_2_flag.1
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		dmm_mod_2_flag.1
+	}
+}
