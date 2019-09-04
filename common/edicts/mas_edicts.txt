@@ -18,7 +18,7 @@ merge_ai_species = {
         custom_tooltip = edict_merge_ai_species_effect
         hidden_effect = {
             country_event = {
-                id = merge_ai_species.1
+                id = merge_ai_species_main_menu.1
             }
         }
     }

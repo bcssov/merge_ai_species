@@ -37,6 +37,11 @@ The mod does not automatically run so it should not impact the gameplay. BUT whe
 [i]Can I use in an existing game?[/i]
 Sure it was designed to declutter existing games of species and then use AI Species Limit to keep them in check.
 
+[i]Are there any requirements for this mod?[/i]
+Mod doesn't have any requirements. It does work well with 2 of my other mods though.
+1. Dynamic Mod Menu: without Dynamic Mod Menu launching this mod will be done via edicts menu. If DMM is installed edict will disappear and will be launchable through DMM.
+2. AI Species Limit: Merge AI Species is designed to complement AI Species Limit but it doesn't have to be installed for this mod to work.
+
 [i]You messed up my game![/i]
 Please backup your save games before running the mod.
 

@@ -1,0 +1,23 @@
+namespace = merge_ai_species_main_menu
+
+country_event = {
+	id = merge_ai_species_main_menu.1
+	title = merge_ai_species_main_menu.1.title
+	desc = merge_ai_species_main_menu.1.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+
+	after = {
+		remove_global_flag = dmm_mod_2_opened
+	}
+	
+	immediate = {
+
+	}
+	option = {
+		name = merge_ai_species_main_menu.1.close
+	}
+}

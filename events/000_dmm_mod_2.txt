@@ -3,20 +3,16 @@ namespace = dmm_mod
 
 country_event = {
     id = dmm_mod.2
-    title = "dmm_mod.2.title"
-    desc = "dmm_mod.2.desc"
-    picture = GFX_evt_psionics
+    hide_window = yes
     is_triggered_only = yes
 
     trigger = {
         has_global_flag = dmm_mod_2
     }
 
-    after = {
-        remove_global_flag = dmm_mod_2_opened
-    }
-
-    option = {
-        name = "dmm_options.1.close"
+    immediate = {
+        country_event = {
+            id = merge_ai_species_main_menu.1
+        }
     }
 }
