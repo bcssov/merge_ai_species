@@ -4,8 +4,125 @@ country_event = {
 	id = merge_ai_species.1
 	hide_window = yes
 	is_triggered_only = yes
-	immediate = {
 
+	trigger = {
+		is_ai = yes
+	}
+	immediate = {
+		if = {
+			limit = {
+				count_exact_species = {
+					count > 1
+				}
+			}
+			every_owned_pop_species = {
+				limit = {
+					NOT = {
+						has_trait = trait_self_modified
+					}
+					root = {
+						count_owned_pops = {
+							count < 10
+							limit = {
+								is_exact_same_species = prev
+							}
+						}
+						count_exact_species = {
+							count > 1
+							limit = {
+								OR = {
+									is_same_species = prev
+									is_subspecies = prev
+								}
+							}
+						}
+					}
+				}
+
+				set_species_flag = mas_merge_species_currently_processing
+
+				# Now find the most populus species, obviously there is no sorting supported. Why would you need that in a scripting language anyways?
+				### BEGIN TEMPLATE ###
+				if = {
+					limit = {
+						root = {
+							count_owned_pops = {
+								count >= 5000
+								limit = {
+									OR = {
+										is_same_species = prev
+										is_subspecies = prev
+									}
+									NOR = {
+										species = {
+											has_species_flag = mas_merge_species_currently_processing
+										}
+										has_trait = trait_self_modified
+									}
+								}
+							}
+						}
+					}
+					root = {
+						random_owned_pop_species = {
+							limit = {
+								count_pops = {
+									count >= 5000
+									limit = {
+										OR = {
+											is_same_species = prevprev
+											is_subspecies = prevprev
+										}
+										NOR = {
+											species = {
+												has_species_flag = mas_merge_species_currently_processing
+											}
+											has_trait = trait_self_modified
+										}
+									}
+								}
+							}
+							set_species_flag = mas_merge_species_target_species
+							save_event_target_as = mas_target_species
+						}
+					}
+				}
+				### END TEMPLATE ###
+
+				if = {
+					limit = {
+						root = {
+							count_owned_pop_species = {
+								count > 0
+								limit = {
+									has_species_flag = mas_merge_species_target_species
+								}
+							}
+						}
+					}
+					root = {
+						every_owned_pop = {
+							limit = {
+								is_being_purged = no
+								species = {
+									has_species_flag = mas_merge_species_currently_processing
+								}
+							}
+							change_species = event_target:mas_target_species
+						}
+					}
+				}
+				remove_species_flag = mas_merge_species_currently_processing
+				root = {
+					every_owned_pop_species = {
+						limit = {
+							has_species_flag = mas_merge_species_target_species
+						}
+						remove_species_flag = mas_merge_species_target_species
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -13,7 +130,120 @@ country_event = {
 	id = merge_ai_species.2
 	hide_window = yes
 	is_triggered_only = yes
-	immediate = {
 
+	trigger = {
+		is_ai = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				count_exact_species = {
+					count > 1
+				}
+			}
+			every_owned_pop_species = {
+				limit = {					
+					root = {
+						count_owned_pops = {
+							count < 10
+							limit = {
+								is_exact_same_species = prev
+							}
+						}
+						count_exact_species = {
+							count > 1
+							limit = {
+								OR = {
+									is_same_species = prev
+									is_subspecies = prev
+								}
+							}
+						}
+					}
+				}
+
+				set_species_flag = mas_merge_species_currently_processing
+
+				# Now find the most populus species, obviously there is no sorting supported. Why would you need that in a scripting language anyways?
+				### BEGIN TEMPLATE ###
+				if = {
+					limit = {
+						root = {
+							count_owned_pops = {
+								count >= 5000
+								limit = {
+									OR = {
+										is_same_species = prev
+										is_subspecies = prev
+									}
+									NOT = {
+										species = {
+											has_species_flag = mas_merge_species_currently_processing
+										}										
+									}
+								}
+							}
+						}
+					}
+					root = {
+						random_owned_pop_species = {
+							limit = {
+								count_pops = {
+									count >= 5000
+									limit = {
+										OR = {
+											is_same_species = prevprev
+											is_subspecies = prevprev
+										}
+										NOT = {
+											species = {
+												has_species_flag = mas_merge_species_currently_processing
+											}											
+										}
+									}
+								}
+							}
+							set_species_flag = mas_merge_species_target_species
+							save_event_target_as = mas_target_species
+						}
+					}
+				}
+				### END TEMPLATE ###
+
+				if = {
+					limit = {
+						root = {
+							count_owned_pop_species = {
+								count > 0
+								limit = {
+									has_species_flag = mas_merge_species_target_species
+								}
+							}
+						}
+					}
+					root = {
+						every_owned_pop = {
+							limit = {
+								is_being_purged = no
+								species = {
+									has_species_flag = mas_merge_species_currently_processing
+								}
+							}
+							change_species = event_target:mas_target_species
+						}
+					}
+				}
+				remove_species_flag = mas_merge_species_currently_processing
+				root = {
+					every_owned_pop_species = {
+						limit = {
+							has_species_flag = mas_merge_species_target_species
+						}
+						remove_species_flag = mas_merge_species_target_species
+					}
+				}
+			}
+		}
 	}
 }

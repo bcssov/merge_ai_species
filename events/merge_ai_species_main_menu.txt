@@ -103,6 +103,11 @@ country_event = {
 			limit = {
 				is_ai = yes
 				has_communications = event_target:mas_country
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+					is_country_type = fallen_empire
+				}
 				NOT = {
 					has_country_flag = mas_processed
 				}
@@ -152,6 +157,11 @@ country_event = {
 					limit = {
 						is_ai = yes
 						has_communications = event_target:mas_country
+						OR = {
+							is_country_type = default
+							is_country_type = awakened_fallen_empire
+							is_country_type = fallen_empire
+						}
 						NOT = {
 							has_country_flag = mas_processed
 						}
@@ -235,6 +245,11 @@ country_event = {
 			limit = {
 				is_ai = yes
 				has_communications = event_target:mas_country
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+					is_country_type = fallen_empire
+				}
 				NOT = {
 					has_country_flag = mas_processed
 				}
@@ -284,6 +299,11 @@ country_event = {
 					limit = {
 						is_ai = yes
 						has_communications = event_target:mas_country
+						OR = {
+							is_country_type = default
+							is_country_type = awakened_fallen_empire
+							is_country_type = fallen_empire
+						}
 						NOT = {
 							has_country_flag = mas_processed
 						}
