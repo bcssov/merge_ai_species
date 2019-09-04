@@ -12,3 +12,5 @@ low = {
     'range': 10,
     'step': -1
 }
+
+items_per_page = 10

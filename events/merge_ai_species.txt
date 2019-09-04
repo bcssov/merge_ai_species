@@ -1,0 +1,19 @@
+namespace = merge_ai_species
+
+country_event = {
+	id = merge_ai_species.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+
+	}
+}
+
+country_event = {
+	id = merge_ai_species.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+
+	}
+}

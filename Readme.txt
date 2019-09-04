@@ -7,8 +7,8 @@ It's a mod which merges less populous species in an empire with the most populou
 You run the mod manually (by edict or using the Dynamic Mod Menu: https://steamcommunity.com/sharedfiles/filedetails/?id=1840010432). Select one of the following options:
 1. Merge species in all countries
 2. Merge species in all countries (include self-modified trait)
-3. Run merge species on a single country
-4. Run merge species on a single country (include self-modified trait)
+3. Merge species on a single country
+4. Merge species on a single country (include self-modified trait)
 
 Mod will then find all pops in a country which have a count less than 10 and merge them with the most populous species (of its kind).
 
