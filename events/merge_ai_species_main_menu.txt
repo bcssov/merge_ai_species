@@ -95,9 +95,9 @@ country_event = {
 	}
 
 	immediate = {
-		### BEGIN TEMPLATE ###
+		### BEGIN TEMPLATE:targets ###
 		save_event_target_as = mas_target_1
-		### END TEMPLATE ###
+		### END TEMPLATE:targets ###
 
 		every_country = {
 			limit = {
@@ -112,7 +112,7 @@ country_event = {
 					has_country_flag = mas_processed
 				}
 			}
-			### BEGIN TEMPLATE ###
+			### BEGIN TEMPLATE:set_targets ###
 			if = {
 				limit = {
 					event_target:mas_target_1 = {
@@ -122,11 +122,11 @@ country_event = {
 				save_event_target_as = mas_target_1
 				set_country_flag = mas_processed
 			}
-			### END TEMPLATE ###
+			### END TEMPLATE:set_targets ###
 		}
 	}
 
-	### BEGIN TEMPLATE ###
+	### BEGIN TEMPLATE:options ###
 	option = {
 		name = merge_ai_species_main_menu.10.target_1
 
@@ -146,7 +146,7 @@ country_event = {
 			id = merge_ai_species_main_menu.11
 		}
 	}
-	### END TEMPLATE ###
+	### END TEMPLATE:options ###
 
 	option = {
 		name = merge_ai_species_main_menu.10.next
@@ -206,14 +206,14 @@ country_event = {
 			limit = {
 				has_country_flag = mas_processed
 			}
-			### BEGIN TEMPLATE ###
+			### BEGIN TEMPLATE:cleanup ###
 			if = {
 				limit = {
 					is_same_value = event_target:mas_target_1
 				}
 				remove_country_flag = mas_processed
 			}
-			### END TEMPLATE ###
+			### END TEMPLATE:cleanup ###
 		}
 		event_target:mas_target = {
 			country_event = {
@@ -237,9 +237,9 @@ country_event = {
 	}
 
 	immediate = {
-		### BEGIN TEMPLATE ###
+		### BEGIN TEMPLATE:targets ###
 		save_event_target_as = mas_target_1
-		### END TEMPLATE ###
+		### END TEMPLATE:targets ###
 
 		every_country = {
 			limit = {
@@ -254,7 +254,7 @@ country_event = {
 					has_country_flag = mas_processed
 				}
 			}
-			### BEGIN TEMPLATE ###
+			### BEGIN TEMPLATE:set_targets ###
 			if = {
 				limit = {
 					event_target:mas_target_1 = {
@@ -264,11 +264,11 @@ country_event = {
 				save_event_target_as = mas_target_1
 				set_country_flag = mas_processed
 			}
-			### END TEMPLATE ###
+			### END TEMPLATE:set_targets ###
 		}
 	}
 
-	### BEGIN TEMPLATE ###
+	### BEGIN TEMPLATE:options_2 ###
 	option = {
 		name = merge_ai_species_main_menu.20.target_1
 
@@ -288,7 +288,7 @@ country_event = {
 			id = merge_ai_species_main_menu.21
 		}
 	}
-	### END TEMPLATE ###
+	### END TEMPLATE:options_2 ###
 
 	option = {
 		name = merge_ai_species_main_menu.20.next
@@ -348,14 +348,14 @@ country_event = {
 			limit = {
 				has_country_flag = mas_processed
 			}
-			### BEGIN TEMPLATE ###
+			### BEGIN TEMPLATE:cleanup ###
 			if = {
 				limit = {
 					is_same_value = event_target:mas_target_1
 				}
 				remove_country_flag = mas_processed
 			}
-			### END TEMPLATE ###
+			### END TEMPLATE:cleanup ###
 		}
 		event_target:mas_target = {
 			country_event = {

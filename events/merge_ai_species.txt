@@ -42,7 +42,7 @@ country_event = {
 				set_species_flag = mas_merge_species_currently_processing
 
 				# Now find the most populus species, obviously there is no sorting supported. Why would you need that in a scripting language anyways?
-				### BEGIN TEMPLATE ###
+				### BEGIN TEMPLATE:event_1 ###
 				if = {
 					limit = {
 						root = {
@@ -87,7 +87,7 @@ country_event = {
 						}
 					}
 				}
-				### END TEMPLATE ###
+				### END TEMPLATE:event_1 ###
 
 				if = {
 					limit = {
@@ -143,7 +143,7 @@ country_event = {
 				}
 			}
 			every_owned_pop_species = {
-				limit = {					
+				limit = {
 					root = {
 						count_owned_pops = {
 							count < 10
@@ -166,7 +166,7 @@ country_event = {
 				set_species_flag = mas_merge_species_currently_processing
 
 				# Now find the most populus species, obviously there is no sorting supported. Why would you need that in a scripting language anyways?
-				### BEGIN TEMPLATE ###
+				### BEGIN TEMPLATE:event_2 ###
 				if = {
 					limit = {
 						root = {
@@ -180,7 +180,7 @@ country_event = {
 									NOT = {
 										species = {
 											has_species_flag = mas_merge_species_currently_processing
-										}										
+										}
 									}
 								}
 							}
@@ -199,7 +199,7 @@ country_event = {
 										NOT = {
 											species = {
 												has_species_flag = mas_merge_species_currently_processing
-											}											
+											}
 										}
 									}
 								}
@@ -209,7 +209,7 @@ country_event = {
 						}
 					}
 				}
-				### END TEMPLATE ###
+				### END TEMPLATE:event_2 ###
 
 				if = {
 					limit = {
