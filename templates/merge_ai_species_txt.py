@@ -1,11 +1,11 @@
 from templates.utils import settings, templater
 
 template_1 = """
-				{1} = {{
+				{if_statement} = {{
 					limit = {{
 						root = {{
 							count_owned_pops = {{
-								count >= {0}
+								count >= {count}
 								limit = {{
 									OR = {{
 										is_same_species = prev
@@ -25,7 +25,7 @@ template_1 = """
 						random_owned_pop_species = {{
 							limit = {{
 								count_pops = {{
-									count >= {0}
+									count >= {count}
 									limit = {{
 										OR = {{
 											is_same_species = prevprev
@@ -47,11 +47,11 @@ template_1 = """
 				}}"""
 
 template_2 = """
-				{1} = {{
+				{if_statement} = {{
 					limit = {{
 						root = {{
 							count_owned_pops = {{
-								count >= {0}
+								count >= {count}
 								limit = {{
 									OR = {{
 										is_same_species = prev
@@ -70,7 +70,7 @@ template_2 = """
 						random_owned_pop_species = {{
 							limit = {{
 								count_pops = {{
-									count >= {0}
+									count >= {count}
 									limit = {{
 										OR = {{
 											is_same_species = prevprev
@@ -97,19 +97,19 @@ def process(publish_dir):
 
     for i in range(settings.max['range'], settings.middle['range'], settings.max['step']):
         if i == settings.max['range']:
-            lines_1.append(template_1.format(i, "if"))
-            lines_2.append(template_2.format(i, "if"))
+            lines_1.append(template_1.format(count=i, if_statement="if"))
+            lines_2.append(template_2.format(count=i, if_statement="if"))
         else:
-            lines_1.append(template_1.format(i, "else_if"))
-            lines_2.append(template_2.format(i, "else_if"))
+            lines_1.append(template_1.format(count=i, if_statement="else_if"))
+            lines_2.append(template_2.format(count=i, if_statement="else_if"))
 
     for i in range(settings.middle['range'], settings.low['range'], settings.middle['step']):
-        lines_1.append(template_1.format(i, "else_if"))
-        lines_2.append(template_2.format(i, "else_if"))
+        lines_1.append(template_1.format(count=i, if_statement="else_if"))
+        lines_2.append(template_2.format(count=i, if_statement="else_if"))
     for i in range(settings.low['range'], 0, settings.low['step']):
-        lines_1.append(template_1.format(i, "else_if"))
-        lines_2.append(template_2.format(i, "else_if"))
+        lines_1.append(template_1.format(count=i, if_statement="else_if"))
+        lines_2.append(template_2.format(count=i, if_statement="else_if"))
 
     templater.process_file(
         publish_dir + "/events/merge_ai_species.txt",
-        lines_1, lines_2)
+        event_1=lines_1, event_2=lines_2)

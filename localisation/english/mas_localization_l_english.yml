@@ -19,7 +19,7 @@
  merge_ai_species_main_menu.20.main:0 "$merge_ai_species_main_menu.10.main$"
  merge_ai_species_main_menu.20.next:0 "$merge_ai_species_main_menu.10.next$"
  merge_ai_species_main_menu.20.close:0 "$merge_ai_species_main_menu.1.close$"
- ### BEGIN TEMPLATE ###
+ ### BEGIN TEMPLATE:targets ###
  merge_ai_species_main_menu.10.target_1:0 "[mas_target_1.GetName]" 
  merge_ai_species_main_menu.20.target_1:0 "[mas_target_1.GetName]" 
- ### END TEMPLATE ###
+ ### END TEMPLATE:targets ###
