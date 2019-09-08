@@ -7,8 +7,10 @@ It's a mod which merges less populous species in an empire with the most populou
 You run the mod manually (by edict or using the Dynamic Mod Menu: https://steamcommunity.com/sharedfiles/filedetails/?id=1840010432). Select one of the following options:
 1. Merge species in all countries
 2. Merge species in all countries (include self-modified trait)
-3. Merge species on a single country
-4. Merge species on a single country (include self-modified trait)
+3. Merge robot and machine species in all countries
+4. Merge species in a single country
+5. Merge species in a single country (include self-modified trait)
+6. Merge robot and machine species in a single country
 
 Mod will then find all pops in a country which have a count less than 10 and merge them with the most populous species (of its kind).
 
@@ -42,6 +44,24 @@ Mod doesn't have any requirements. It does work well with 2 of my other mods tho
 1. Dynamic Mod Menu: without Dynamic Mod Menu launching this mod will be done via edicts menu. If DMM is installed edict will disappear and will be launchable through DMM.
 2. AI Species Limit: Merge AI Species is designed to complement AI Species Limit but it doesn't have to be installed for this mod to work.
 
+[i]How are robot species merged?[/i]
+This option will find all machine and robot pops in a country that have less than than 10 pops. It will then locate the most populous machine or robot species and merge it with them making them a single species.
+
+[i]Does the robot\machine merge differentiate between robot and synth ascension pops?[/i]
+No.
+
+[i]Why isn't there any differentiation between robots and synth ascension pops?[/i]
+Short answer: They are all machines now.
+Long answer: There's no way to differentiate these in the game via code.
+
+[i]Is it really not possible do differentiate synth ascension pops between regular robots[/i]
+Not without overwriting few stock events.
+
+[i]Will you consider covering scenario to differentiate between synth and robots?[/i]
+No.
+
 [i]You messed up my game![/i]
 Please backup your save games before running the mod.
 
+[i]Why do I need to backup my game[/i]
+In theory the mod will not messup anything but you might not be satisfied with the results of the merge. Therefore before using it the first time I recommend that you backup your save run the mod and see the results.

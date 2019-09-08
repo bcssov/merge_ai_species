@@ -8,6 +8,7 @@ def process(publish_dir):
     for i in range(1, settings.items_per_page + 1):
         lines.append(template.format(target_id=i, event_id=10))
         lines.append(template.format(target_id=i, event_id=20))
+        lines.append(template.format(target_id=i, event_id=30))
 
     templater.process_file(
         publish_dir + "/localisation/english/mas_localization_l_english.yml",

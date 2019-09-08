@@ -49,6 +49,7 @@ def process(publish_dir):
     lines_flags_assign = []
     lines_options_10 = []
     lines_options_20 = []
+    lines_options_30 = []
     lines_clear_flags = []
     for i in range(1, settings.items_per_page + 1):
         lines_flags.append(template_flags.format(target_id=i))
@@ -56,6 +57,8 @@ def process(publish_dir):
             target_id=i, event_id=10, cleanup_event_id=11))
         lines_options_20.append(template_options.format(
             target_id=i, event_id=20, cleanup_event_id=21))
+        lines_options_30.append(template_options.format(
+            target_id=i, event_id=30, cleanup_event_id=31))
         if i == 1:
             lines_flags_assign.append(
                 template_flag_assign.format(if_statement="if", target_id=i))
@@ -71,4 +74,4 @@ def process(publish_dir):
         publish_dir + "/events/merge_ai_species_main_menu.txt",
         targets=lines_flags, set_targets=lines_flags_assign,
         options=lines_options_10,  cleanup=lines_clear_flags,
-        options_2=lines_options_20)
+        options_2=lines_options_20, options_3=lines_options_30)
