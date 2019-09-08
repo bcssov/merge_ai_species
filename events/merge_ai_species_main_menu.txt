@@ -64,6 +64,25 @@ country_event = {
 	}
 
 	option = {
+		name = merge_ai_species_main_menu.1.merge_robot
+
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = yes
+				}
+				country_event = {
+					id = merge_ai_species.3
+				}
+			}
+
+			country_event = {
+				id = merge_ai_species_main_menu.1
+			}
+		}
+	}
+
+	option = {
 		name = merge_ai_species_main_menu.1.country_merge
 
 		country_event = {
@@ -76,6 +95,14 @@ country_event = {
 
 		country_event = {
 			id = merge_ai_species_main_menu.20
+		}
+	}
+
+	option = {
+		name = merge_ai_species_main_menu.1.country_merge_robot
+
+		country_event = {
+			id = merge_ai_species_main_menu.30
 		}
 	}
 
@@ -360,6 +387,147 @@ country_event = {
 		event_target:mas_target = {
 			country_event = {
 				id = merge_ai_species.2
+			}
+		}
+		country_event = {
+			id = merge_ai_species_main_menu.1
+		}
+	}
+}
+
+country_event = {
+	id = merge_ai_species_main_menu.30
+	title = merge_ai_species_main_menu.30.title
+	desc = merge_ai_species_main_menu.30.desc
+	picture = GFX_evt_psionics
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		### BEGIN TEMPLATE:targets ###
+		save_event_target_as = mas_target_1
+		### END TEMPLATE:targets ###
+
+		every_country = {
+			limit = {
+				is_ai = yes
+				has_communications = event_target:mas_country
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+					is_country_type = fallen_empire
+				}
+				NOT = {
+					has_country_flag = mas_processed
+				}
+			}
+			### BEGIN TEMPLATE:set_targets ###
+			if = {
+				limit = {
+					event_target:mas_target_1 = {
+						is_same_value = event_target:mas_country
+					}
+				}
+				save_event_target_as = mas_target_1
+				set_country_flag = mas_processed
+			}
+			### END TEMPLATE:set_targets ###
+		}
+	}
+	### BEGIN TEMPLATE:options_3 ###
+	option = {
+		name = merge_ai_species_main_menu.30.target_1
+
+		trigger = {
+			NOT = {
+				event_target:mas_target_1 = {
+					is_same_value = event_target:mas_country
+				}
+			}
+		}
+
+		event_target:mas_target_1 = {
+			save_event_target_as = mas_target
+		}
+
+		country_event = {
+			id = merge_ai_species_main_menu.31
+		}
+	}
+	### END TEMPLATE:options_3 ###
+
+	option = {
+		name = merge_ai_species_main_menu.30.next
+
+		if = {
+			limit = {
+				count_country = {
+					limit = {
+						is_ai = yes
+						has_communications = event_target:mas_country
+						OR = {
+							is_country_type = default
+							is_country_type = awakened_fallen_empire
+							is_country_type = fallen_empire
+						}
+						NOT = {
+							has_country_flag = mas_processed
+						}
+					}
+					count < 1
+				}
+			}
+			every_country = {
+				limit = {
+					has_country_flag = mas_processed
+				}
+				remove_country_flag = mas_processed
+			}
+		}
+		country_event = {
+			id = merge_ai_species_main_menu.30
+		}
+	}
+	option = {
+		name = merge_ai_species_main_menu.30.main
+
+		country_event = {
+			id = merge_ai_species_main_menu.1
+		}
+	}
+	option = {
+		name = merge_ai_species_main_menu.30.close
+	}
+}
+
+country_event = {
+	id = merge_ai_species_main_menu.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_country_flag = mas_processed
+			}
+			### BEGIN TEMPLATE:cleanup ###
+			if = {
+				limit = {
+					is_same_value = event_target:mas_target_1
+				}
+				remove_country_flag = mas_processed
+			}
+			### END TEMPLATE:cleanup ###
+		}
+		event_target:mas_target = {
+			country_event = {
+				id = merge_ai_species.3
 			}
 		}
 		country_event = {
