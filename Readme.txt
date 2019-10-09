@@ -4,7 +4,7 @@
 It's a mod which merges less populous species in an empire with the most populous species (in an empire).
 
 [i]How does it work exactly?[/i]
-You run the mod manually (by edict or using the Dynamic Mod Menu: https://steamcommunity.com/sharedfiles/filedetails/?id=1840010432). Select one of the following options:
+You run the mod manually (by edict or using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1840010432)]Dynamic Mod Menu[/url]). Select one of the following options:
 1. Merge species in all countries
 2. Merge species in all countries (include self-modified trait)
 3. Merge robot and machine species in all countries
@@ -63,5 +63,8 @@ No.
 [i]You messed up my game![/i]
 Please backup your save games before running the mod.
 
-[i]Why do I need to backup my game[/i]
+[i]Why do I need to backup my game?[/i]
 In theory the mod will not messup anything but you might not be satisfied with the results of the merge. Therefore before using it the first time I recommend that you backup your save run the mod and see the results.
+
+[h1]Older Versions[/h1]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1885042685]2.3[/url]
