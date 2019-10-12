@@ -3,7 +3,8 @@ import os
 from templates import get_modules
 
 copy_directories = ["common", "events", "gfx", "interface", "localisation"]
-copy_files = ["Readme.txt", "descriptor.mod", "1.jpg", "2.jpg", "3.jpg"]
+copy_files = ["Readme.txt", "descriptor.mod",
+              "thumbnail.png", "1.jpg", "2.jpg", "3.jpg"]
 
 mode_name = "merge_ai_species"
 destination = "publish/" + mode_name
