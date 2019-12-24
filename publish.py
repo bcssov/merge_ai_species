@@ -1,6 +1,7 @@
 import shutil
 import os
 from templates import get_modules
+from templates.utils import locales
 
 copy_directories = ["common", "events", "gfx", "interface", "localisation"]
 copy_files = ["Readme.txt", "descriptor.mod",
@@ -34,3 +35,4 @@ if __name__ == "__main__":
     clean_up()
     copy()
     process_templates()
+    locales.process_locales(destination)
