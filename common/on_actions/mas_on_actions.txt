@@ -1,0 +1,17 @@
+dmm_mod_selected = {
+	events = {
+		merge_ai_species_main_menu.101
+	}
+}
+
+on_game_start = {
+	events = {
+		merge_ai_species_main_menu.100
+	}
+}
+
+on_save_game_load = {
+	events = {
+		merge_ai_species_main_menu.100
+	}
+}

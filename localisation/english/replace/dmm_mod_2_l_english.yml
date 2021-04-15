@@ -1,5 +1,0 @@
-﻿
-l_english:
- dmm_mod_2:0 "Merge AI Species"
- dmm_mod.2.title:0 "$dmm_mod_2$"
- dmm_mod.2.desc:0 "Select one of the following options:\n1. Merge species in all countries > menu closes and mod does its thing\n2. Merge species in all countries (include self-modified trait) > menu closes and mod does its thing\n3. Merge robot and machine species in all countries > menu closes and mod does its thing\n4. Merge species in a single country > another menu opens which lists all countries > you pick a country > menu closes and mod does its thing\n5. Merge species in a single country (include self-modified trait) > another menu opens which lists all countries > you pick a country > menu closes and mod does its thing\n6. Merge robot and machine species in a single country > another menu opens which lists all countries > you pick a country > menu closes and mod does its thing"

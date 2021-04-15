@@ -6,4 +6,4 @@ tags = {
 
 picture = "thumbnail.png"
 remote_file_id = "1853570703"
-supported_version = "2.8.*"
+supported_version = "3.0.*"

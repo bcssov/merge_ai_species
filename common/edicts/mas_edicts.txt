@@ -9,7 +9,7 @@ merge_ai_species = {
 	length = 0
 	potential = {
 		NOT = {
-			has_global_flag = dynamic_mod_menu_installed
+			has_global_flag = dmm_installed
 		}
 	}
 	effect = {

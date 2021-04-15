@@ -23,7 +23,7 @@ country_event = {
 						has_trait = trait_self_modified
 					}
 					root = {
-						count_owned_pops = {
+						count_owned_pop = {
 							count < @species_comparer
 							limit = {
 								is_exact_same_species = prev
@@ -48,7 +48,7 @@ country_event = {
 				if = {
 					limit = {
 						root = {
-							count_owned_pops = {
+							count_owned_pop = {
 								count >= 5000
 								limit = {
 									OR = {
@@ -147,7 +147,7 @@ country_event = {
 			every_owned_pop_species = {
 				limit = {
 					root = {
-						count_owned_pops = {
+						count_owned_pop = {
 							count < @species_comparer
 							limit = {
 								is_exact_same_species = prev
@@ -172,7 +172,7 @@ country_event = {
 				if = {
 					limit = {
 						root = {
-							count_owned_pops = {
+							count_owned_pop = {
 								count >= 5000
 								limit = {
 									OR = {
@@ -287,7 +287,7 @@ country_event = {
 						}
 					}
 					root = {
-						count_owned_pops = {
+						count_owned_pop = {
 							count < @species_comparer
 							limit = {
 								is_exact_same_species = prev
@@ -303,7 +303,7 @@ country_event = {
 				if = {
 					limit = {
 						root = {
-							count_owned_pops = {
+							count_owned_pop = {
 								count >= 5000
 								limit = {
 									species = {
@@ -313,7 +313,7 @@ country_event = {
 										}
 									}
 									root = {
-										count_owned_pops = {
+										count_owned_pop = {
 											limit = {
 												is_exact_same_species = prev
 											}
@@ -342,7 +342,7 @@ country_event = {
 											}
 										}
 										root = {
-											count_owned_pops = {
+											count_owned_pop = {
 												limit = {
 													is_exact_same_species = prev
 												}

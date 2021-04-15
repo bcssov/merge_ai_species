@@ -4,7 +4,7 @@ template_1 = """
 				{if_statement} = {{
 					limit = {{
 						root = {{
-							count_owned_pops = {{
+							count_owned_pop = {{
 								count >= {count}
 								limit = {{
 									OR = {{
@@ -50,7 +50,7 @@ template_2 = """
 				{if_statement} = {{
 					limit = {{
 						root = {{
-							count_owned_pops = {{
+							count_owned_pop = {{
 								count >= {count}
 								limit = {{
 									OR = {{
@@ -93,7 +93,7 @@ template_3 = """
 				{if_statement} = {{
 					limit = {{
 						root = {{
-							count_owned_pops = {{
+							count_owned_pop = {{
 								count >= {count}
 								limit = {{
 									species = {{
@@ -103,7 +103,7 @@ template_3 = """
 										}}
 									}}
 									root = {{
-										count_owned_pops = {{
+										count_owned_pop = {{
 											limit = {{
 												is_exact_same_species = prev
 											}}
@@ -132,7 +132,7 @@ template_3 = """
 											}}
 										}}
 										root = {{
-											count_owned_pops = {{
+											count_owned_pop = {{
 												limit = {{
 													is_exact_same_species = prev
 												}}

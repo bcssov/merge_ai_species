@@ -1,22 +1,18 @@
 namespace = merge_ai_species_main_menu
-
 country_event = {
 	id = merge_ai_species_main_menu.1
 	title = merge_ai_species_main_menu.1.title
 	desc = merge_ai_species_main_menu.1.desc
 	picture = GFX_evt_psionics
 	is_triggered_only = yes
-
 	trigger = {
 		is_ai = no
 	}
 	after = {
 		remove_global_flag = dmm_mod_2_opened
 	}
-
 	immediate = {
 		save_event_target_as = mas_country
-
 		every_country = {
 			limit = {
 				has_country_flag = mas_processed
@@ -24,10 +20,8 @@ country_event = {
 			remove_country_flag = mas_processed
 		}
 	}
-
 	option = {
 		name = merge_ai_species_main_menu.1.merge
-
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -37,16 +31,13 @@ country_event = {
 					id = merge_ai_species.1
 				}
 			}
-
 			country_event = {
 				id = merge_ai_species_main_menu.1
 			}
 		}
 	}
-
 	option = {
 		name = merge_ai_species_main_menu.1.merge_all
-
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -56,16 +47,13 @@ country_event = {
 					id = merge_ai_species.2
 				}
 			}
-
 			country_event = {
 				id = merge_ai_species_main_menu.1
 			}
 		}
 	}
-
 	option = {
 		name = merge_ai_species_main_menu.1.merge_robot
-
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -75,37 +63,29 @@ country_event = {
 					id = merge_ai_species.3
 				}
 			}
-
 			country_event = {
 				id = merge_ai_species_main_menu.1
 			}
 		}
 	}
-
 	option = {
 		name = merge_ai_species_main_menu.1.country_merge
-
 		country_event = {
 			id = merge_ai_species_main_menu.10
 		}
 	}
-
 	option = {
 		name = merge_ai_species_main_menu.1.country_merge_all
-
 		country_event = {
 			id = merge_ai_species_main_menu.20
 		}
 	}
-
 	option = {
 		name = merge_ai_species_main_menu.1.country_merge_robot
-
 		country_event = {
 			id = merge_ai_species_main_menu.30
 		}
 	}
-
 	option = {
 		name = merge_ai_species_main_menu.1.close
 	}
@@ -120,12 +100,10 @@ country_event = {
 	trigger = {
 		is_ai = no
 	}
-
 	immediate = {
 		### BEGIN TEMPLATE:targets ###
 		save_event_target_as = mas_target_1
 		### END TEMPLATE:targets ###
-
 		every_country = {
 			limit = {
 				is_ai = yes
@@ -152,11 +130,9 @@ country_event = {
 			### END TEMPLATE:set_targets ###
 		}
 	}
-
 	### BEGIN TEMPLATE:options ###
 	option = {
 		name = merge_ai_species_main_menu.10.target_1
-
 		trigger = {
 			NOT = {
 				event_target:mas_target_1 = {
@@ -164,20 +140,16 @@ country_event = {
 				}
 			}
 		}
-
 		event_target:mas_target_1 = {
 			save_event_target_as = mas_target
 		}
-
 		country_event = {
 			id = merge_ai_species_main_menu.11
 		}
 	}
 	### END TEMPLATE:options ###
-
 	option = {
 		name = merge_ai_species_main_menu.10.next
-
 		if = {
 			limit = {
 				count_country = {
@@ -209,7 +181,6 @@ country_event = {
 	}
 	option = {
 		name = merge_ai_species_main_menu.10.main
-
 		country_event = {
 			id = merge_ai_species_main_menu.1
 		}
@@ -223,11 +194,9 @@ country_event = {
 	id = merge_ai_species_main_menu.11
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		is_ai = no
 	}
-
 	immediate = {
 		every_country = {
 			limit = {
@@ -262,12 +231,10 @@ country_event = {
 	trigger = {
 		is_ai = no
 	}
-
 	immediate = {
 		### BEGIN TEMPLATE:targets ###
 		save_event_target_as = mas_target_1
 		### END TEMPLATE:targets ###
-
 		every_country = {
 			limit = {
 				is_ai = yes
@@ -294,11 +261,9 @@ country_event = {
 			### END TEMPLATE:set_targets ###
 		}
 	}
-
 	### BEGIN TEMPLATE:options_2 ###
 	option = {
 		name = merge_ai_species_main_menu.20.target_1
-
 		trigger = {
 			NOT = {
 				event_target:mas_target_1 = {
@@ -306,20 +271,16 @@ country_event = {
 				}
 			}
 		}
-
 		event_target:mas_target_1 = {
 			save_event_target_as = mas_target
 		}
-
 		country_event = {
 			id = merge_ai_species_main_menu.21
 		}
 	}
 	### END TEMPLATE:options_2 ###
-
 	option = {
 		name = merge_ai_species_main_menu.20.next
-
 		if = {
 			limit = {
 				count_country = {
@@ -351,7 +312,6 @@ country_event = {
 	}
 	option = {
 		name = merge_ai_species_main_menu.20.main
-
 		country_event = {
 			id = merge_ai_species_main_menu.1
 		}
@@ -365,11 +325,9 @@ country_event = {
 	id = merge_ai_species_main_menu.21
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		is_ai = no
 	}
-
 	immediate = {
 		every_country = {
 			limit = {
@@ -404,12 +362,10 @@ country_event = {
 	trigger = {
 		is_ai = no
 	}
-
 	immediate = {
 		### BEGIN TEMPLATE:targets ###
 		save_event_target_as = mas_target_1
 		### END TEMPLATE:targets ###
-
 		every_country = {
 			limit = {
 				is_ai = yes
@@ -439,7 +395,6 @@ country_event = {
 	### BEGIN TEMPLATE:options_3 ###
 	option = {
 		name = merge_ai_species_main_menu.30.target_1
-
 		trigger = {
 			NOT = {
 				event_target:mas_target_1 = {
@@ -447,20 +402,16 @@ country_event = {
 				}
 			}
 		}
-
 		event_target:mas_target_1 = {
 			save_event_target_as = mas_target
 		}
-
 		country_event = {
 			id = merge_ai_species_main_menu.31
 		}
 	}
 	### END TEMPLATE:options_3 ###
-
 	option = {
 		name = merge_ai_species_main_menu.30.next
-
 		if = {
 			limit = {
 				count_country = {
@@ -492,7 +443,6 @@ country_event = {
 	}
 	option = {
 		name = merge_ai_species_main_menu.30.main
-
 		country_event = {
 			id = merge_ai_species_main_menu.1
 		}
@@ -506,11 +456,9 @@ country_event = {
 	id = merge_ai_species_main_menu.31
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		is_ai = no
 	}
-
 	immediate = {
 		every_country = {
 			limit = {
@@ -532,6 +480,39 @@ country_event = {
 		}
 		country_event = {
 			id = merge_ai_species_main_menu.1
+		}
+	}
+}
+
+event = {
+	id = merge_ai_species_main_menu.100
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		dmm_register_mod = {
+			DMM_FLAG = mas_flag
+			DMM_NAME = edict_merge_ai_species
+		}
+	}
+}
+
+event = {
+	id = merge_ai_species_main_menu.101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			has_leader_flag = mas_flag
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = merge_ai_species_main_menu.1
+			}
 		}
 	}
 }
