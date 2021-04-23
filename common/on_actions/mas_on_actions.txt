@@ -10,7 +10,7 @@ on_game_start = {
 	}
 }
 
-on_save_game_load = {
+on_single_player_save_game_load = {
 	events = {
 		merge_ai_species_main_menu.100
 	}
