@@ -26,15 +26,15 @@ country_event = {
 						count_owned_pop = {
 							count < @species_comparer
 							limit = {
-								is_exact_same_species = prev
+								is_exact_same_species = prevprev
 							}
 						}
 						count_exact_species = {
 							count > 1
 							limit = {
 								OR = {
-									is_same_species = prev
-									is_subspecies = prev
+									is_same_species = prevprev
+									is_subspecies = prevprev
 								}
 							}
 						}
@@ -52,8 +52,8 @@ country_event = {
 								count >= 5000
 								limit = {
 									OR = {
-										is_same_species = prev
-										is_subspecies = prev
+										is_same_species = prevprev
+										is_subspecies = prevprev
 									}
 									NOR = {
 										species = {
@@ -72,8 +72,8 @@ country_event = {
 									count >= 5000
 									limit = {
 										OR = {
-											is_same_species = prevprev
-											is_subspecies = prevprev
+											is_same_species = prevprevprev
+											is_subspecies = prevprevprev
 										}
 										NOR = {
 											species = {
@@ -150,15 +150,15 @@ country_event = {
 						count_owned_pop = {
 							count < @species_comparer
 							limit = {
-								is_exact_same_species = prev
+								is_exact_same_species = prevprev
 							}
 						}
 						count_exact_species = {
 							count > 1
 							limit = {
 								OR = {
-									is_same_species = prev
-									is_subspecies = prev
+									is_same_species = prevprev
+									is_subspecies = prevprev
 								}
 							}
 						}
@@ -176,8 +176,8 @@ country_event = {
 								count >= 5000
 								limit = {
 									OR = {
-										is_same_species = prev
-										is_subspecies = prev
+										is_same_species = prevprev
+										is_subspecies = prevprev
 									}
 									NOT = {
 										species = {
@@ -195,8 +195,8 @@ country_event = {
 									count >= 5000
 									limit = {
 										OR = {
-											is_same_species = prevprev
-											is_subspecies = prevprev
+											is_same_species = prevprevprev
+											is_subspecies = prevprevprev
 										}
 										NOT = {
 											species = {
@@ -290,7 +290,7 @@ country_event = {
 						count_owned_pop = {
 							count < @species_comparer
 							limit = {
-								is_exact_same_species = prev
+								is_exact_same_species = prevprevprev
 							}
 						}
 					}
@@ -315,7 +315,7 @@ country_event = {
 									root = {
 										count_owned_pop = {
 											limit = {
-												is_exact_same_species = prev
+												is_exact_same_species = prevprev
 											}
 											count >= 5000
 										}
@@ -344,7 +344,7 @@ country_event = {
 										root = {
 											count_owned_pop = {
 												limit = {
-													is_exact_same_species = prev
+													is_exact_same_species = prevprev
 												}
 												count >= 5000
 											}

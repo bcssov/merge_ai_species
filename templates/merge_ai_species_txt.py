@@ -8,8 +8,8 @@ template_1 = """
 								count >= {count}
 								limit = {{
 									OR = {{
-										is_same_species = prev
-										is_subspecies = prev
+										is_same_species = prevprev
+										is_subspecies = prevprev
 									}}
 									NOR = {{
 										species = {{
@@ -28,8 +28,8 @@ template_1 = """
 									count >= {count}
 									limit = {{
 										OR = {{
-											is_same_species = prevprev
-											is_subspecies = prevprev
+											is_same_species = prevprevprev
+											is_subspecies = prevprevprev
 										}}
 										NOR = {{
 											species = {{
@@ -54,8 +54,8 @@ template_2 = """
 								count >= {count}
 								limit = {{
 									OR = {{
-										is_same_species = prev
-										is_subspecies = prev
+										is_same_species = prevprev
+										is_subspecies = prevprev
 									}}
 									NOT = {{
 										species = {{
@@ -73,8 +73,8 @@ template_2 = """
 									count >= {count}
 									limit = {{
 										OR = {{
-											is_same_species = prevprev
-											is_subspecies = prevprev
+											is_same_species = prevprevprev
+											is_subspecies = prevprevprev
 										}}
 										NOT = {{
 											species = {{
@@ -105,7 +105,7 @@ template_3 = """
 									root = {{
 										count_owned_pop = {{
 											limit = {{
-												is_exact_same_species = prev
+												is_exact_same_species = prevprev
 											}}
 											count >= {count}
 										}}
@@ -134,7 +134,7 @@ template_3 = """
 										root = {{
 											count_owned_pop = {{
 												limit = {{
-													is_exact_same_species = prev
+													is_exact_same_species = prevprev
 												}}
 												count >= {count}
 											}}

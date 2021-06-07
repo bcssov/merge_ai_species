@@ -8,9 +8,6 @@ country_event = {
 	trigger = {
 		is_ai = no
 	}
-	after = {
-		remove_global_flag = dmm_mod_2_opened
-	}
 	immediate = {
 		save_event_target_as = mas_country
 		every_country = {
