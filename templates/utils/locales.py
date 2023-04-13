@@ -2,7 +2,8 @@ import glob
 import os
 
 locales = ["l_braz_por", "l_french", "l_german",
-           "l_polish", "l_russian", "l_simp_chinese", "l_spanish"]
+           "l_polish", "l_russian", "l_simp_chinese", "l_spanish",
+           "l_russian", "l_japanese"]
 
 default_locale = "l_english"
 
