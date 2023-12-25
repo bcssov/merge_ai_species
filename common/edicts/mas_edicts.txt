@@ -6,7 +6,7 @@ merge_ai_species = {
 			influence = 0
 		}
 	}
-	length = 0
+	length = 1	#0 sigh
 	potential = {
 		NOT = {
 			has_global_flag = dmm_installed

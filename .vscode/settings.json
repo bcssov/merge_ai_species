@@ -30,5 +30,5 @@
         "editor.defaultFormatter": "tboby.cwtools-vscode"
     },
     "python.pythonPath": "C:\\Programs\\Python3.8\\python.exe",
-    "workbench.colorTheme": "Default Dark+"
+    "workbench.colorTheme": "Stellaris Theme"
 }
